@@ -41,6 +41,9 @@ crawler
     let imgUrl = $(".imgTagWrapper img").attr("src");
     result["imgUrl"] = imgUrl;
 
+    let price = $("priceblock_ourprice").text();
+    result["price"] = price;
+
     console.log(JSON.stringify(result, null, 2));
   })
   .catch((err) => console.log(err));
