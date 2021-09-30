@@ -1,11 +1,10 @@
 const cheerio = require("cheerio");
-const crawler = require("./crawl");
+const { crawl } = require("./crawl");
 
 let url =
   "https://www.amazon.in/Samsung-Galaxy-Ocean-128GB-Storage/dp/B07HG8S7KP/";
 
-crawler
-  .crawl(url)
+crawl(url)
   .then((content) => {
     let result = {};
 
