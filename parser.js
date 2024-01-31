@@ -41,6 +41,7 @@ crawl(url)
     result["imgUrl"] = imgUrl;
 
     let price = $("priceblock_ourprice").text();
+    price = price || $("#availability span.a-color-success").text().trim()
     result["price"] = price;
 
     console.log(JSON.stringify(result, null, 2));
